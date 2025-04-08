@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Thank You</title>
+    <style>
+      body {
+        font-family: "Times New Roman", sans-serif;
+        background-color: transparent;
+        display: flex;
+        width: 100%;
+        margin: 0;
+      }
+      .container {
+        background-color: white;
+        padding: 30px;
+        border-radius: 20px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 100%;
+      }
+      .icon {
+        margin-bottom: 20px;
+      }
+      .icon svg {
+        width: 80px;
+        height: 80px;
+      }
+      .icon circle {
+        stroke: #7030a0;
+        stroke-width: 5;
+        fill: none;
+      }
+      .icon path {
+        stroke: #7c4dff;
+        stroke-width: 6;
+        fill: none;
+      }
+      h1 {
+        font-size: 32px;
+        color: #606060;
+        margin: 0;
+        font-weight: bold;
+      }
+      p {
+        font-family: "Times New Roman", sans-serif;
+        font-size: 18px;
+        color: #606060;
+        margin-top: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="icon">
+        <svg
+          xmlns="
+http://www.w3.org/2000/svg"
+          viewBox="0 0 100 100"
+        >
+          <!-- Outer circle -->
+          <circle
+            cx="50"
+            cy="50"
+            r="45"
+            stroke="#7030a0"
+            stroke-width="5"
+            fill="none"
+          />
+          <!-- Tick inside the circle, with size 35x24 -->
+          <polyline
+            points="30,50 45,65 70,35"
+            stroke="#7030a0"
+            stroke-width="5"
+            fill="none"
+          />
+        </svg>
+      </div>
+      <h1>SUBMITTED</h1>
+      <br />
+      <p>
+        Thank you for contacting us! We will get back to you as soon as
+        possible.
+      </p>
+    </div>
+    <script>
+      window.onload = function () {
+        var message = {
+          type: "formSubmitted",
+          data: "The form has been submitted and submit button is disabled.",
+        };
+        window.parent.postMessage(message, "*");
+      };
+    </script>
+  </body>
+</html>
